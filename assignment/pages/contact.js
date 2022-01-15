@@ -2,7 +2,7 @@ import Header from "../compoments/header";
 import Banner from "../compoments/banner";
 import Footer from "../compoments/footer";
 
-const AboutPage = {
+const ContactPage = {
     render() {
         return /* html */`
         <div class="max-w-screen-lg m-auto">
@@ -13,7 +13,8 @@ const AboutPage = {
                 ${Banner.render()}
             </div>
             <div>
-            <h1> AboutPage </h1>
+                <h1> ContactPage </h1>
+                
             </div>
         
                 ${Footer.render()}
@@ -23,4 +24,4 @@ const AboutPage = {
         `;
     },
 };
-export default AboutPage;
+export default ContactPage;

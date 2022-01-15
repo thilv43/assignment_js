@@ -1,17 +1,20 @@
 import Navigo from "navigo";
-import Header from "./compoments/header";
 import AboutPage from "./pages/about";
+import ContactPage from "./pages/contact";
 import DetailNewsPage from "./pages/detailNew";
 import HomePage from "./pages/home";
 import NewsPage from "./pages/news";
-import Footer from "./compoments/footer";
+import Login from "./pages/login";
+import Signin from "./pages/signin";
+import Admin from "./pages/dashbourd";
+import NewAdd from "./admin/newadd";
+import ListTable from "./admin/listtable";
+import NewEdit from "./admin/newedit";
 
 const router = new Navigo("/", { linksSelector: "a" });
 
 const print = (content) => {
-    document.getElementById("header").innerHTML = Header.render();
     document.getElementById("app").innerHTML = content;
-    document.getElementById("footer").innerHTML = Footer.render();
 };
 
 router.on({
@@ -27,6 +30,28 @@ router.on({
     "/news/:id": ({ data }) => {
         const { id } = data;
         print(DetailNewsPage.render(id));
+    },
+    "/contact": () => {
+        print(ContactPage.render());
+    },
+    "/admin": () => {
+        print(Admin.render());
+    },
+    "admin/news/add": () => {
+        print(NewAdd.render());
+    },
+    "/news/listtable": () => {
+        print(ListTable.render());
+    },
+    "/admin/news/:id/edit": ({ data }) => {
+        const { id } = data;
+        print(NewEdit.render(id));
+    },
+    "/signin": () => {
+        print(Signin.render());
+    },
+    "/login": () => {
+        print(Login.render());
     },
 });
 router.resolve();
