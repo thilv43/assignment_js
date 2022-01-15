@@ -1,7 +1,7 @@
 const NewAdd = {
     render() {
         return /* html */ `
-        <nav class="bg-blue-500 h-16 mt-[0px] max-w-screen-xl ">
+        <nav class="bg-blue-500 h-16 mt-[0px] max-w-screen-2xl ">
         <div class="max-w-7xl mx-auto px-2 pt-1.5">
         <div class="relative flex items-center justify-between">
             <button class="px-4 py-2 text-gray-700 text-2xl rounded-lg hover:bg-blue-500">
